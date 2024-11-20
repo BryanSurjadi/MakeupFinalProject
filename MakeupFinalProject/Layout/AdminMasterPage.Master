@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="MakeupFinalProject.Layout.AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/AdminStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="nav">
+            <nav>
+                <asp:PlaceHolder ID="AdminNav" runat="server" Visible="false">
+                    <!-- Admin Navigation -->
+                    <asp:Button ID="homeBtn" runat="server" CssClass="nav-button" Text="Home" OnClick="homeBtn_Click"/>
+                    <asp:Button ID="adminTransactionBtn" runat="server" CssClass="nav-button" Text="Transaction History" OnClick="adminTransactionBtn_Click" />
+                    <asp:Button ID="adminProfileBtn" runat="server" CssClass="nav-button" Text="Profile" OnClick="adminProfileBtn_Click"/>
+                    <asp:Button ID="manageMakeupBtn" runat="server" CssClass="nav-button" Text="Manage Makeup" OnClick="manageMakeupBtn_Click"/>
+                    <asp:Button ID="orderQueueBtn" runat="server" CssClass="nav-button" Text="Order Queue" OnClick="orderQueueBtn_Click"/>
+                    <asp:Button ID="transactionReportBtn" runat="server" CssClass="nav-button" Text="Transaction Report" OnClick="transactionReportBtn_Click"/>
+                    <asp:Button ID="adminLogoutButton" runat="server" CssClass="nav-button" Text="Logout" OnClick="adminLogoutButton_Click"/>
+                </asp:PlaceHolder>
+
+                <asp:PlaceHolder ID="CustomerNav" runat="server" Visible="false">
+                    <asp:Button ID="orderBtn" runat="server" CssClass="nav-button" Text="Order Makeup" OnClick="orderBtn_Click" />
+                    <asp:Button ID="profileBtn" runat="server" CssClass="nav-button" Text="Profile" OnClick="profileBtn_Click"/>
+                    <asp:Button ID="transactionBtn" runat="server" CssClass="nav-button" Text="Transaction History" OnClick="transactionBtn_Click"/>
+                    <asp:Button ID="logoutBtn" runat="server" CssClass="nav-button" Text="Logout" OnClick="logoutBtn_Click"/>
+                </asp:PlaceHolder>
+            </nav>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="contentBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

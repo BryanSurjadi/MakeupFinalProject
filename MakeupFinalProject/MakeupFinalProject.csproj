@@ -1,0 +1,365 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{345652D1-3D06-412F-9BBE-EC8CDAAB284B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MakeupFinalProject</RootNamespace>
+    <AssemblyName>MakeupFinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44327</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\MakeupDatabase.mdf" />
+    <Content Include="App_Data\MakeupDatabase_log.ldf">
+      <DependentUpon>MakeupDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="Models\MakeupModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MakeupModel.Context.cs</LastGenOutput>
+      <DependentUpon>MakeupModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\MakeupModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MakeupModel.edmx</DependentUpon>
+      <LastGenOutput>MakeupModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Styles\AdminStyle.css" />
+    <Content Include="Views\HomeViews\Home.aspx" />
+    <Content Include="Views\MakeupView\InsertBrand.aspx" />
+    <Content Include="Views\MakeupView\InsertMakeup.aspx" />
+    <Content Include="Views\MakeupView\InsertType.aspx" />
+    <Content Include="Views\MakeupView\ManageMakeup.aspx" />
+    <Content Include="Views\MakeupView\OrderMakeup.aspx" />
+    <Content Include="Views\MakeupView\UpdateBrand.aspx" />
+    <Content Include="Views\MakeupView\UpdateMakeup.aspx" />
+    <Content Include="Views\MakeupView\UpdateType.aspx" />
+    <Content Include="Views\ProfileViews\Login.aspx" />
+    <Content Include="Views\ProfileViews\Profile.aspx" />
+    <Content Include="Views\ProfileViews\Register.aspx" />
+    <Content Include="Views\TesBos.aspx" />
+    <Content Include="Views\tipescapt.aspx" />
+    <Content Include="Views\TransactionViews\HandleTransaction.aspx" />
+    <Content Include="Views\TransactionViews\TransactionDetails.aspx" />
+    <Content Include="Views\TransactionViews\TransactionHistory.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\BrandController.cs" />
+    <Compile Include="Controller\CartController.cs" />
+    <Compile Include="Controller\MakeupController.cs" />
+    <Compile Include="Controller\TransactionDetailController.cs" />
+    <Compile Include="Controller\TransactionHeaderController.cs" />
+    <Compile Include="Controller\TypeController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Factories\CartFactory.cs" />
+    <Compile Include="Factories\MakeupBrandFactory.cs" />
+    <Compile Include="Factories\MakeupFactory.cs" />
+    <Compile Include="Factories\MakeupTypeFactory.cs" />
+    <Compile Include="Factories\TransactionDetailFactory.cs" />
+    <Compile Include="Factories\TransactionHeaderFactory.cs" />
+    <Compile Include="Factories\UserFactory.cs" />
+    <Compile Include="Handler\BrandHandler.cs" />
+    <Compile Include="Handler\CartHandler.cs" />
+    <Compile Include="Handler\MakeupHandler.cs" />
+    <Compile Include="Handler\TransactionDetailHandler.cs" />
+    <Compile Include="Handler\TransactionHeaderHandler.cs" />
+    <Compile Include="Handler\TypeHandler.cs" />
+    <Compile Include="Handler\UserHandler.cs" />
+    <Compile Include="Layout\AdminMasterPage.Master.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout\AdminMasterPage.Master.designer.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cart.cs">
+      <DependentUpon>MakeupModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Makeup.cs">
+      <DependentUpon>MakeupModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MakeupBrand.cs">
+      <DependentUpon>MakeupModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MakeupModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MakeupModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MakeupModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MakeupModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MakeupModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MakeupModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MakeupType.cs">
+      <DependentUpon>MakeupModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransactionDetail.cs">
+      <DependentUpon>MakeupModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransactionHeader.cs">
+      <DependentUpon>MakeupModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>MakeupModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CartRepository.cs" />
+    <Compile Include="Repositories\DatabaseSingleton.cs" />
+    <Compile Include="Repositories\MakeupBrandRepository.cs" />
+    <Compile Include="Repositories\MakeupRepository.cs" />
+    <Compile Include="Repositories\MakeupTypeRepository.cs" />
+    <Compile Include="Repositories\TransactionDetailRepository.cs" />
+    <Compile Include="Repositories\TransactionHeaderRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Views\HomeViews\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\HomeViews\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MakeupView\InsertBrand.aspx.cs">
+      <DependentUpon>InsertBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MakeupView\InsertBrand.aspx.designer.cs">
+      <DependentUpon>InsertBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MakeupView\InsertMakeup.aspx.cs">
+      <DependentUpon>InsertMakeup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MakeupView\InsertMakeup.aspx.designer.cs">
+      <DependentUpon>InsertMakeup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MakeupView\InsertType.aspx.cs">
+      <DependentUpon>InsertType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MakeupView\InsertType.aspx.designer.cs">
+      <DependentUpon>InsertType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MakeupView\ManageMakeup.aspx.cs">
+      <DependentUpon>ManageMakeup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MakeupView\ManageMakeup.aspx.designer.cs">
+      <DependentUpon>ManageMakeup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MakeupView\OrderMakeup.aspx.cs">
+      <DependentUpon>OrderMakeup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MakeupView\OrderMakeup.aspx.designer.cs">
+      <DependentUpon>OrderMakeup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MakeupView\UpdateBrand.aspx.cs">
+      <DependentUpon>UpdateBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MakeupView\UpdateBrand.aspx.designer.cs">
+      <DependentUpon>UpdateBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MakeupView\UpdateMakeup.aspx.cs">
+      <DependentUpon>UpdateMakeup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MakeupView\UpdateMakeup.aspx.designer.cs">
+      <DependentUpon>UpdateMakeup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MakeupView\UpdateType.aspx.cs">
+      <DependentUpon>UpdateType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MakeupView\UpdateType.aspx.designer.cs">
+      <DependentUpon>UpdateType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfileViews\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ProfileViews\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfileViews\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ProfileViews\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfileViews\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ProfileViews\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TesBos.aspx.cs">
+      <DependentUpon>TesBos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TesBos.aspx.designer.cs">
+      <DependentUpon>TesBos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\tipescapt.aspx.cs">
+      <DependentUpon>tipescapt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\tipescapt.aspx.designer.cs">
+      <DependentUpon>tipescapt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransactionViews\HandleTransaction.aspx.cs">
+      <DependentUpon>HandleTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TransactionViews\HandleTransaction.aspx.designer.cs">
+      <DependentUpon>HandleTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransactionViews\TransactionDetails.aspx.cs">
+      <DependentUpon>TransactionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TransactionViews\TransactionDetails.aspx.designer.cs">
+      <DependentUpon>TransactionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransactionViews\TransactionHistory.aspx.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TransactionViews\TransactionHistory.aspx.designer.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\MakeupModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MakeupModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\MakeupModel.edmx.diagram">
+      <DependentUpon>MakeupModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Layout\AdminMasterPage.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52551</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44327/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

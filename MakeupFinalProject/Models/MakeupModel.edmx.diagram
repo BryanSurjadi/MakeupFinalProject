@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23fb780477c24b9db2e37682b196e097" Name="Diagram1">
+        <EntityTypeShape EntityType="MakeupDatabaseModel.Cart" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MakeupDatabaseModel.MakeupBrand" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MakeupDatabaseModel.Makeup" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MakeupDatabaseModel.MakeupType" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MakeupDatabaseModel.TransactionDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MakeupDatabaseModel.TransactionHeader" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="MakeupDatabaseModel.User" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="MakeupDatabaseModel.FK_carts___makeups" ManuallyRouted="false" />
+        <AssociationConnector Association="MakeupDatabaseModel.FK_carts___users" ManuallyRouted="false" />
+        <AssociationConnector Association="MakeupDatabaseModel.FK_makeups_makeupBrands" ManuallyRouted="false" />
+        <AssociationConnector Association="MakeupDatabaseModel.FK_makeups_makeupTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="MakeupDatabaseModel.FK_transactionDetails_makeups" ManuallyRouted="false" />
+        <AssociationConnector Association="MakeupDatabaseModel.FK_transactionDetails_transactionHeaders" ManuallyRouted="false" />
+        <AssociationConnector Association="MakeupDatabaseModel.FK_transactionHeaders_users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,268 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+    .nav nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+        .nav nav .nav-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 4px 2px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+            .nav nav .nav-button:hover {
+                background-color: #45a049;
+            }
+
+.container {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+    }
+
+    header hr {
+        border: 0;
+        height: 1px;
+        background: #ccc;
+    }
+
+.grid-view {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .grid-view th, .grid-view td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .grid-view th {
+        background-color: #f2f2f2;
+    }
+
+    .grid-view tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .grid-view tr:hover {
+        background-color: #f1f1f1;
+    }
+
+.label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.user-info {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+
+
+/* Additional styles for login page */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox {
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+    .button:hover {
+        background-color: #45a049;
+    }
+
+.error-label {
+    color: red;
+}
+
+/* Additional styles for order page */
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.grid-view {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+    .grid-view th, .grid-view td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .grid-view th {
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+    .button:hover {
+        background-color: #45a049;
+    }
+
+.error-label {
+    color: red;
+    display: block;
+    margin-top: 10px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* Additional styles for manage makeup page */
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+header h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.grid-view {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+    .grid-view th, .grid-view td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .grid-view th {
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+    .button:hover {
+        background-color: #45a049;
+    }
+
+.error-label {
+    color: red;
+    display: block;
+    margin-top: 10px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 10px;
+}
+
